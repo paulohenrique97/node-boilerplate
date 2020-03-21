@@ -1,0 +1,25 @@
+{
+  "name": "node-boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate to my node.js apps",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paulopatine/node-boilerplate.git"
+  },
+  "keywords": [
+    "node",
+    "boilerplate"
+  ],
+  "author": "Paulo Henrique Mendes Vieira",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0"
+  }
+}
