@@ -1,9 +1,20 @@
 "use strict";
 
-const app = require("./server/server");
-const port = 3000;
+const app = require("./config/server");
 const routes = require("./routes");
+const fs = require("fs");
 
-app.listen(port, () => {
-    routes(app);
-});
+fs.readFile("./config/config.json", (err, data) => {
+    try {
+        if (err) {
+            console.log(err);
+        } else {
+            let config = JSON.parse(data);
+            app.listen(config.port, () => {
+                routes(app);
+            })
+        }
+    } catch (err) {
+        console.log(err);
+    }
+})
