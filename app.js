@@ -17,4 +17,4 @@ fs.readFile("./config/config.json", (err, data) => {
     } catch (err) {
         console.log(err);
     }
-})
+});
