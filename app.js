@@ -12,6 +12,7 @@ try {
             let config = JSON.parse(data);
             app.listen(config.port, () => {
                 routes(app);
+                console.log("Escutando...\nPorta: %d.\nAmbiente: %s.", config.port, config.env);
             })
         }
     });
