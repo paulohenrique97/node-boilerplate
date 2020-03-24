@@ -1,4 +1,5 @@
 "use strict";
+
 let indexController = require("./app/controllers/Index");
 
 module.exports = (app) => {
