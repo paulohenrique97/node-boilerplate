@@ -4,8 +4,8 @@ const app = require("./config/server");
 const routes = require("./routes");
 const fs = require("fs");
 
-fs.readFile("./config/config.json", (err, data) => {
-    try {
+try {
+    fs.readFile("./config/config.json", (err, data) => {
         if (err) {
             console.log(err);
         } else {
@@ -14,7 +14,7 @@ fs.readFile("./config/config.json", (err, data) => {
                 routes(app);
             })
         }
-    } catch (err) {
-        console.log(err);
-    }
-});
+    });
+} catch (err) {
+    console.log(err);
+}
