@@ -2,6 +2,10 @@
 
 module.exports = {
     index(req, res) {
-        res.render("index");
+        try{
+            res.render("index");
+        } catch (err) {
+            console.log(err);
+        }
     }
 }

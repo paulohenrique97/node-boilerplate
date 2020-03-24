@@ -2,5 +2,9 @@
 let indexController = require("./app/controllers/Index");
 
 module.exports = (app) => {
-    app.get("/", indexController.index);
+    try {
+        app.get("/", indexController.index);
+    } catch (err) {
+        console.log(err);
+    }
 }
