@@ -11,6 +11,8 @@ try {
     app.set("views", "./public/views");
 
     app.use(express.static("public"));
+    app.use("/public/bootstrap", express.static("./node_modules/bootstrap/dist"));
+    app.use("/public/jquery", express.static("./node_modules/jquery/dist"));
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(session({
@@ -21,6 +23,5 @@ try {
 } catch (err) {
     console.log(err);
 }
-
 
 module.exports = app;
