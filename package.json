@@ -17,6 +17,7 @@
   "author": "Paulo Henrique Mendes Vieira",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.5.2",
     "ejs": "^3.0.1",

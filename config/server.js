@@ -13,6 +13,7 @@ try {
     app.use(express.static("public"));
     app.use("/public/bootstrap", express.static("./node_modules/bootstrap/dist"));
     app.use("/public/jquery", express.static("./node_modules/jquery/dist"));
+    app.use("/public/font-awesome", express.static("./node_modules/@fortawesome/fontawesome-free"));
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(session({
