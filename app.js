@@ -1,20 +1,14 @@
 "use strict";
 
+require('dotenv').config();
+
 const app = require("./config/server");
 const routes = require("./routes");
-const fs = require("fs");
 
 try {
-    fs.readFile("./config/config.json", (err, data) => {
-        if (err) {
-            console.log(err);
-        } else {
-            let config = JSON.parse(data);
-            app.listen(config.port, () => {
-                routes(app);
-                console.log("Escutando...\nPorta: %d.\nAmbiente: %s.", config.port, config.env);
-            })
-        }
+    app.listen(process.env.PORT, () => {
+        routes(app);
+        console.log("Escutando...\nPorta: %d.\nAmbiente: %s.", process.env.PORT, process.env.ENVIROMENT);
     });
 } catch (err) {
     console.log(err);
